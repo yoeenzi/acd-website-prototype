@@ -1,0 +1,644 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 450px;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-color: #F0000D;
+  padding-bottom: 40px;
+  background: linear-gradient(to right, #F0000D 0%, #F0000D 51%, transparent 51%), url('../../assets/careers.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(240, 0, 13, 0.51);
+  padding-top: 50px;
+  width: 100%;
+}
+
+/* Custom container wrapper for hero to adjust left positioning */
+.heroContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Maintain consistent left padding on larger screens */
+@media (min-width: 1240px) {
+  .heroContainer {
+    padding: 0 20px;
+  }
+}
+
+.heroContent {
+  max-width: 650px;
+  text-align: left !important;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  margin-left: -5px;
+}
+
+.badge {
+  background-color: #F1DE1F;
+  color: #000;
+  padding: 8px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(40px, 7vw, 65px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 15px 0;
+  padding: 0;
+  letter-spacing: 1px;
+  text-align: left !important;
+  text-transform: uppercase;
+  display: block;
+  color: white;
+}
+
+.yellowText {
+  color: #F1DE1F;
+  display: inline;
+}
+
+.heroSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: 500;
+  text-align: left !important;
+  padding: 0;
+  margin-left: 0;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start !important;
+  margin-top: -5px;
+  text-align: left !important;
+}
+
+/* Button styles with Montserrat font and simple animations */
+.btnPrimary,
+.btnOutline {
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.btnPrimary {
+  background-color: white;
+  color: #F0000D;
+}
+
+.btnOutline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Simple hover effect for all buttons */
+.btnPrimary:hover,
+.btnOutline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Why Choose Section */
+.whyChoose {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.sectionTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(36px, 5vw, 48px);
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #000;
+}
+
+.textRed {
+  color: #dc2626;
+}
+
+.sectionSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 50px;
+  font-weight: 400;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefitCard {
+  background: white;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.benefitIcon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.benefitCard h3 {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: #000;
+}
+
+.benefitCard p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Open Positions Section */
+.openPositions {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-family: 'Montserrat', sans-serif;
+  padding: 12px 30px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tab:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.activeTab {
+  background-color: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+.jobsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.jobCard {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.jobCard:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.jobType {
+  background-color: #FEE2E2;
+  color: #dc2626;
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.jobTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 28px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: #000;
+}
+
+.jobLocation {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.jobDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.requirements {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.requirements li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+  font-weight: 400;
+}
+
+.applyBtn {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #dc2626;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+
+.applyBtn:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+}
+
+/* Core Values Section */
+.coreValues {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.coreValuesTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(40px, 5vw, 56px);
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  background-color: #f9f9f9;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+}
+
+.valueCircle {
+  width: 80px;
+  height: 80px;
+  background-color: #F1DE1F;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.valueLetter {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 42px;
+  color: white;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.valueTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.2;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonialCard {
+  background: white;
+  padding: 35px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.quote {
+  font-size: 72px;
+  color: #ddd;
+  line-height: 1;
+  margin-bottom: -20px;
+  font-family: Georgia, serif;
+}
+
+.testimonialText {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.authorInitials {
+  width: 50px;
+  height: 50px;
+  background-color: #dc2626;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'League Gothic', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.testimonialAuthor h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.testimonialAuthor p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Ready to Start Section */
+.readyToStart {
+  background-color: #F1DE1F;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(42px, 5vw, 56px);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  color: #000;
+}
+
+.ctaSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnDark,
+.btnLight {
+  font-family: 'Montserrat', sans-serif;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.btnDark {
+  background-color: #000;
+  color: white;
+}
+
+.btnLight {
+  background-color: white;
+  color: #000;
+}
+
+.btnDark:hover,
+.btnLight:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 350px;
+    height: auto;
+  }
+  
+  .heroContent {
+    text-align: left !important;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .heroButtons {
+    justify-content: flex-start !important;
+  }
+  
+  .heroOverlay {
+    background: rgba(240, 0, 13, 0.51);
+    padding-top: 25px;
+  }
+  
+  .heroTitle {
+    font-size: clamp(35px, 8vw, 50px);
+    text-align: left !important;
+  }
+  
+  .heroSubtitle {
+    text-align: left !important;
+    font-size: 16px;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .benefitsGrid,
+  .jobsGrid,
+  .valuesGrid,
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabContainer {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(32px, 7vw, 42px);
+  }
+  
+  .coreValuesTitle {
+    font-size: clamp(32px, 7vw, 45px);
+  }
+  
+  .ctaTitle {
+    font-size: clamp(36px, 8vw, 48px);
+  }
+}

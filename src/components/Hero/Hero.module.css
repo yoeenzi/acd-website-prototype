@@ -1,0 +1,148 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.hero {
+  position: relative;
+  min-height: 450px;
+  height: auto;
+  background-image: url('../../assets/construction-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #888;
+  padding-bottom: 40px;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.35);
+  padding-top: 50px;
+  width: 100%;
+}
+
+/* Custom container wrapper for hero to adjust left positioning */
+.heroContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Maintain consistent left padding on larger screens */
+@media (min-width: 1240px) {
+  .heroContainer {
+    padding: 0 20px;
+  }
+}
+
+.heroContent {
+  max-width: 650px;
+  text-align: left !important;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  margin-left: -5px;
+}
+
+.heroTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(40px, 7vw, 65px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 15px 0;
+  padding: 0;
+  letter-spacing: 1px;
+  text-align: left !important;
+  text-transform: none;
+  display: block;
+}
+
+.titleLine {
+  display: block;
+  color: #000000;
+  text-align: left !important;
+  text-transform: none;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.redText {
+  color: var(--primary-red, #FF0000);
+  display: inline;
+  text-transform: none;
+}
+
+.heroSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 25px;
+  font-weight: 500;
+  text-align: left !important;
+  padding: 0;
+  margin-left: 0;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start !important;
+  margin-top: -5px;
+  text-align: left !important;
+}
+
+/* Button styles with Montserrat font and simple animations */
+.heroButtons button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border-radius: 25px; /* Rounded edges */
+  padding: 12px 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Simple hover effect for all buttons */
+.heroButtons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 350px;
+    height: auto;
+  }
+  
+  .heroContent {
+    text-align: left !important;
+    max-width: 100%;
+    padding: 0;
+  }
+  
+  .heroButtons {
+    justify-content: flex-start !important;
+  }
+  
+  .heroOverlay {
+    background: rgba(255, 255, 255, 0.35);
+    padding-top: 25px;
+  }
+  
+  .heroTitle {
+    font-size: clamp(35px, 8vw, 50px);
+    text-align: left !important;
+  }
+  
+  .titleLine {
+    text-align: left !important;
+  }
+  
+  .heroSubtitle {
+    text-align: left !important;
+  }
+}

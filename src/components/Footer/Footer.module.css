@@ -1,0 +1,169 @@
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.footer {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 60px 0 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.footerColumn {
+  padding-right: 20px;
+}
+
+.logo {
+  margin-bottom: 25px;
+}
+
+.logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+/* Logo image styles for footer */
+.logoImage {
+  height: 60px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+/* Mobile responsive logo */
+@media (max-width: 768px) {
+  .logoImage {
+    height: 50px;
+    max-width: 150px;
+  }
+}
+
+.address {
+  display: flex;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #999999;
+}
+
+.columnTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+}
+
+.linkList li {
+  margin-bottom: 12px;
+}
+
+.linkList a {
+  font-family: 'Montserrat', sans-serif;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  transition: var(--transition);
+}
+
+.linkList a:hover {
+  color: var(--primary-red);
+}
+
+.contactInfo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+.contactLabel {
+  font-family: 'Montserrat', sans-serif;
+  color: #666666;
+  margin-bottom: 5px;
+  font-weight: 400;
+}
+
+.contactValue {
+  font-family: 'Montserrat', sans-serif;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.footerBottom {
+  border-top: 1px solid #e5e5e5;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.copyright {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.socialsLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333333;
+}
+
+.socialLink {
+  color: #666666;
+  transition: var(--transition);
+}
+
+.socialLink:hover {
+  color: var(--primary-red);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,276 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.equipmentSection {
+  padding: 60px 0;
+  background-color: #ffffff;
+  min-height: 600px;
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  display: flex;
+  gap: 30px;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  flex-shrink: 0;
+  width: 200px;
+  padding-top: 20px;
+  padding-left: 0;
+  margin-left: -10px;
+}
+
+.categoryNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: sticky;
+  top: 100px;
+}
+
+.categoryButton {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 15px 14px 10px;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.categoryButton:hover {
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+.categoryButton.active {
+  color: #FF0000;
+  font-weight: 700;
+  border-left-color: #FF0000;
+  background-color: #fff5f5;
+}
+
+/* Equipment Content Area */
+.equipmentContent {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Equipment Grid */
+.equipmentGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .equipmentGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .sidebar {
+    width: 100%;
+    padding-top: 0;
+  }
+  
+  .categoryNav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0;
+    border-bottom: 2px solid #e5e5e5;
+    position: static;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .categoryNav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .categoryButton {
+    border-left: none;
+    border-bottom: 3px solid transparent;
+    padding: 12px 20px;
+    white-space: nowrap;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .categoryButton.active {
+    border-left-color: transparent;
+    border-bottom-color: #FF0000;
+    background-color: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .equipmentGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categoryButton {
+    font-size: 12px;
+    padding: 10px 15px;
+  }
+}
+
+/* Equipment Card - Smaller Size */
+.equipmentCard {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.equipmentCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  border-color: #ddd;
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FF0000;
+  color: white;
+  padding: 6px 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  z-index: 1;
+  letter-spacing: 0.5px;
+}
+
+.cardImage {
+  height: 180px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  position: relative;
+}
+
+.cardImage img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+  color: #999;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+}
+
+.cardContent {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 26px;
+  margin-bottom: 4px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.cardType {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.cardDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.cardButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.contactBtn {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FF0000;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid #FF0000;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+}
+
+.contactBtn:hover {
+  background-color: #CC0000;
+  border-color: #CC0000;
+  transform: translateY(-1px);
+}
+
+.checkBtn {
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  color: #333;
+  padding: 8px 20px;
+  border: 2px solid #333;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 0.2px;
+}
+
+.checkBtn:hover {
+  background-color: #333;
+  color: white;
+  transform: translateY(-1px);
+}

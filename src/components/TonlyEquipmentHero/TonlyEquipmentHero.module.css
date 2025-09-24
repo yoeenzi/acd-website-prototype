@@ -1,0 +1,138 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.hero {
+  position: relative;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 127, 20, 0.85), rgba(139, 127, 20, 0.7));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.heroContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.badge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FBBF24;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 40px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hyundaiBtn,
+.tonlyBtn {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 14px 35px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+/* Hyundai button - unselected state (white) */
+.hyundaiBtn {
+  background-color: white;
+  color: #333;
+}
+
+.hyundaiBtn:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+/* Tonly button - selected/active state (blue) */
+.tonlyBtn {
+  background-color: #0066CC;
+  color: white;
+}
+
+.tonlyBtn:hover {
+  background-color: #0052A3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 350px;
+  }
+  
+  .heroContent {
+    padding: 40px 20px;
+  }
+  
+  .heroTitle {
+    font-size: clamp(28px, 7vw, 42px);
+    margin-bottom: 30px;
+  }
+  
+  .badge {
+    font-size: 12px;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .hyundaiBtn,
+  .tonlyBtn {
+    width: 100%;
+  }
+}

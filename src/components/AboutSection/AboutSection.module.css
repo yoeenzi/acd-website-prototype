@@ -1,0 +1,153 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.about {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.aboutContent {
+  padding-right: 40px;
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    padding-right: 0;
+  }
+}
+
+.badge {
+  color: var(--primary-red);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.aboutTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(40px, 6vw, 56px);
+  margin-bottom: 30px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.aboutText {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--medium-gray);
+  line-height: 1.8;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.aboutImage {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Updated partners section - positioned to the bottom right */
+.partners {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .partners {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+.partnerLogo {
+  display: flex;
+  align-items: center;
+}
+
+/* Bigger partner images */
+.partnerImg {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Even bigger Hyundai logo */
+.hyundaiImg {
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  .partnerImg {
+    height: 70px;
+  }
+  
+  .hyundaiImg {
+    height: 120px;
+  }
+}
+
+/* Keep these as fallback if needed */
+.hyundaiLogo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #003082;
+  letter-spacing: -1px;
+}
+
+.puzzolanaLogo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  font-style: italic;
+}
+
+.buildingLogo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--medium-gray);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}

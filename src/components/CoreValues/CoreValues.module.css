@@ -1,0 +1,136 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.coreValues {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.sectionTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(40px, 5vw, 56px);
+  text-align: center;
+  margin-bottom: 60px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.textRed {
+  color: var(--primary-red, #FF0000);
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  background-color: #f9f9f9;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  background-color: #fff;
+}
+
+.valueCircle {
+  width: 80px;
+  height: 80px;
+  background-color: var(--yellow, #FBBF24);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.valueLetter {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 42px;
+  color: white;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.valueTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.2;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valueDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .coreValues {
+    padding: 60px 0;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(32px, 7vw, 45px);
+    margin-bottom: 40px;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .valueCard {
+    padding: 30px 20px;
+  }
+  
+  .valueCircle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .valueLetter {
+    font-size: 36px;
+  }
+  
+  .valueTitle {
+    font-size: 22px;
+    min-height: auto;
+  }
+  
+  .valueDescription {
+    font-size: 14px;
+  }
+}

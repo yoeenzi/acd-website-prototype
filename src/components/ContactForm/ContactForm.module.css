@@ -1,0 +1,108 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.contactSection {
+  position: relative;
+  padding: 100px 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url('../../assets/team-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* Changed from 'fixed' to 'scroll' */
+  background-color: #333; /* Fallback */
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .formWrapper {
+    justify-content: center;
+  }
+}
+
+.formContainer {
+  background-color: white;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 30px;
+  }
+}
+
+.badge {
+  color: var(--primary-red);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.formTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 35px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formInput,
+.formTextarea {
+  font-family: 'Montserrat', sans-serif;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px; /* Rounded corners */
+  font-size: 16px;
+  font-weight: 400;
+  transition: var(--transition);
+  width: 100%;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitBtn {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--primary-red);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px; /* Fully rounded pill shape */
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.submitBtn:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}

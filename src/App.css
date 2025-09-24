@@ -1,0 +1,68 @@
+.App {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Global utility classes */
+.text-red {
+  color: var(--primary-red);
+}
+
+.bg-red {
+  background-color: var(--primary-red);
+}
+
+.btn-primary {
+  background-color: var(--primary-red);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--dark-gray);
+  padding: 12px 30px;
+  border: 2px solid var(--dark-gray);
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background-color: var(--dark-gray);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: white;
+  padding: 10px 24px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive grid utilities */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,342 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.servicesPage {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-color: #888;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  display: flex;
+  align-items: center;
+}
+
+.heroContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.heroContent {
+  max-width: 700px;
+  color: white;
+}
+
+.badge {
+  background-color: #FFD700;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.heroTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.heroSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.statsRow {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.statNumber {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 42px;
+  color: #FFD700;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.statLabel {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.4;
+  padding-top: 8px;
+}
+
+/* Core Services Section */
+.coreServices {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.redText {
+  color: var(--primary-red);
+}
+
+.sectionSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceCard {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.serviceIcon {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.serviceTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.serviceDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #666666;
+  margin-bottom: 25px;
+  min-height: 80px;
+}
+
+.serviceList {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #666666;
+}
+
+.serviceList li {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.serviceList li:before {
+  content: '•';
+  color: var(--primary-red);
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+/* Service Process Section */
+.serviceProcess {
+  padding: 80px 0;
+  background-color: #f8f8f8;
+}
+
+.processSteps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.processStep {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.stepNumber {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border: 3px solid #FF0000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'League Gothic', sans-serif;
+  font-size: 42px;
+  color: #FF0000;
+  margin: 0 auto 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.processConnector {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.processStep:nth-child(2) .processConnector {
+  left: -50%;
+  width: 100%;
+}
+
+.processStep:nth-child(4) .processConnector {
+  left: -50%;
+  width: 100%;
+}
+
+.processStep:nth-child(6) .processConnector {
+  left: -50%;
+  width: 100%;
+}
+
+/* Connector lines between steps */
+.processSteps::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background-color: #ddd;
+  z-index: 0;
+}
+
+.stepContent {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.stepTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.stepDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 36px;
+  }
+  
+  .heroSubtitle {
+    font-size: 14px;
+  }
+  
+  .statsRow {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .statNumber {
+    font-size: 32px;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .processSteps {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .processSteps::before {
+    display: none;
+  }
+  
+  .processConnector {
+    display: none;
+  }
+  
+  .sectionTitle {
+    font-size: 36px;
+  }
+}
