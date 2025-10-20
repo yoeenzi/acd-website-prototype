@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import EquipmentShowcase from './components/EquipmentShowcase/EquipmentShowcase';
@@ -12,16 +12,93 @@ import TonlyEquipment from './components/TonlyEquipment/TonlyEquipment';
 import Services from './components/Services/Services';
 import AboutUs from './components/AboutUs/AboutUs';
 import Careers from './components/Careers/Careers';
+import NewsEventsFullPage from './components/NewsEventsFullPage/NewsEventsFullPage';
 import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [scrollToHyundai, setScrollToHyundai] = useState(false);
+
+  // Handle navigation to home
+  const handleNavigateHome = () => {
+    setCurrentPage('home');
+    setScrollToHyundai(false);
+  };
+
+  // Handle navigation to Hyundai Equipment
+  const handleNavigateToHyundai = () => {
+    setCurrentPage('all-equipment');
+    setScrollToHyundai(true);
+  };
+
+  // Handle navigation to Tonly Trucks
+  const handleNavigateToTonly = () => {
+    setCurrentPage('tonly-equipment');
+    setScrollToHyundai(false);
+  };
+
+  // Handle navigation to Services
+  const handleNavigateToServices = () => {
+    setCurrentPage('services');
+    setScrollToHyundai(false);
+  };
+
+  // Handle navigation to About Us
+  const handleNavigateToAbout = () => {
+    setCurrentPage('about-us');
+    setScrollToHyundai(false);
+  };
+
+  // Handle navigation to Careers
+  const handleNavigateToCareers = () => {
+    setCurrentPage('careers');
+    setScrollToHyundai(false);
+  };
+
+  // Handle navigation to News & Events
+  const handleNavigateToNewsEvents = () => {
+    setCurrentPage('news-events');
+    setScrollToHyundai(false);
+  };
+
+  // Scroll to equipment section after page loads
+  useEffect(() => {
+    if (scrollToHyundai && currentPage === 'all-equipment') {
+      setTimeout(() => {
+        const equipmentSection = document.getElementById('equipment-section');
+        if (equipmentSection) {
+          equipmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        setScrollToHyundai(false);
+      }, 100);
+    }
+  }, [currentPage, scrollToHyundai]);
+
+  // Common header props for all pages
+  const headerProps = {
+    onNavigateHome: handleNavigateHome,
+    onNavigateToServices: handleNavigateToServices,
+    onNavigateToAbout: handleNavigateToAbout,
+    onNavigateToCareers: handleNavigateToCareers,
+    onNavigateToHyundai: handleNavigateToHyundai,
+    onNavigateToTonly: handleNavigateToTonly
+  };
+
+  // Show News & Events Full Page
+  if (currentPage === 'news-events') {
+    return (
+      <div className="App">
+        <NewsEventsFullPage onNavigateHome={handleNavigateHome} />
+      </div>
+    );
+  }
 
   // Show Careers page
   if (currentPage === 'careers') {
     return (
       <div className="App">
-        <Careers onNavigateHome={() => setCurrentPage('home')} />
+        <Header {...headerProps} />
+        <Careers onNavigateHome={handleNavigateHome} />
       </div>
     );
   }
@@ -30,7 +107,8 @@ function App() {
   if (currentPage === 'about-us') {
     return (
       <div className="App">
-        <AboutUs onNavigateHome={() => setCurrentPage('home')} />
+        <Header {...headerProps} />
+        <AboutUs onNavigateHome={handleNavigateHome} />
       </div>
     );
   }
@@ -39,6 +117,7 @@ function App() {
   if (currentPage === 'services') {
     return (
       <div className="App">
+        <Header {...headerProps} />
         <Services />
       </div>
     );
@@ -48,6 +127,7 @@ function App() {
   if (currentPage === 'tonly-equipment') {
     return (
       <div className="App">
+        <Header {...headerProps} />
         <TonlyEquipment 
           onBackToAll={() => setCurrentPage('all-equipment')} 
         />
@@ -55,12 +135,13 @@ function App() {
     );
   }
 
-  // Show All Equipment page
+  // Show All Equipment page (Hyundai)
   if (currentPage === 'all-equipment') {
     return (
       <div className="App">
+        <Header {...headerProps} />
         <AllEquipment 
-          onNavigateToTonly={() => setCurrentPage('tonly-equipment')} 
+          onNavigateToTonly={handleNavigateToTonly} 
         />
       </div>
     );
@@ -69,16 +150,12 @@ function App() {
   // Show Home page
   return (
     <div className="App">
-      <Header 
-        onNavigateToServices={() => setCurrentPage('services')}
-        onNavigateToAbout={() => setCurrentPage('about-us')}
-        onNavigateToCareers={() => setCurrentPage('careers')}
-      />
+      <Header {...headerProps} />
       <Hero />
       <EquipmentShowcase onViewAll={() => setCurrentPage('all-equipment')} />
       <AboutSection />
       <CoreValues />
-      <NewsEvents />
+      <NewsEvents onViewAll={handleNavigateToNewsEvents} />
       <ContactForm />
       <Footer />
     </div>

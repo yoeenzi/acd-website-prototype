@@ -1,0 +1,88 @@
+/* Import League Gothic and Montserrat fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap');
+
+.newsEventsPage {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 350px;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.9), rgba(139, 127, 20, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroOverlay {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.badge {
+  background-color: #FBBF24;
+  color: #000;
+  padding: 8px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.heroTitle {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.textRed {
+  color: #FBBF24;
+}
+
+.heroDescription {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 300px;
+  }
+  
+  .heroOverlay {
+    padding: 40px 20px;
+  }
+  
+  .heroTitle {
+    font-size: clamp(32px, 7vw, 45px);
+  }
+  
+  .heroDescription {
+    font-size: 16px;
+  }
+  
+  .heroDescription br {
+    display: none;
+  }
+}

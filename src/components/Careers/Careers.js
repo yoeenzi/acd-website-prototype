@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ContactForm from '../ContactForm/ContactForm';
 import styles from './Careers.module.css';
@@ -164,10 +163,6 @@ const Careers = ({ onNavigateHome }) => {
 
   return (
     <div className="careers-page">
-      <Header 
-        onNavigateHome={onNavigateHome}
-        onNavigateToCareers={() => {}}
-      />
       
       {/* Hero Section */}
       <section 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ContactForm from '../ContactForm/ContactForm';
 import { Wrench, CheckCircle, Users } from 'lucide-react';
@@ -9,8 +8,6 @@ import heroBackground from '../../assets/truck-hero2.png';
 const Services = () => {
   return (
     <div className={styles.servicesPage}>
-      <Header />
-      
       {/* Hero Section */}
       <section 
         className={styles.hero}

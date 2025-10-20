@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import ContactForm from '../ContactForm/ContactForm';
 import styles from './AboutUs.module.css';
@@ -11,8 +10,6 @@ import placeholderStory from '../../assets/excavator-working.png';
 const AboutUs = ({ onNavigateHome }) => {
   return (
     <div className={styles.aboutPage}>
-      <Header onNavigateHome={onNavigateHome} />
-      
       {/* About Hero Section */}
       <section className={styles.aboutHero}>
         <div className={styles.heroOverlay}>
