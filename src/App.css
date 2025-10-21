@@ -12,52 +12,73 @@
   background-color: var(--primary-red);
 }
 
+/* Updated Primary Button - More Professional Size */
 .btn-primary {
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--primary-red);
   color: white;
-  padding: 12px 30px;
-  border-radius: 4px;
+  padding: 10px 24px;
+  border: 2px solid var(--primary-red);
+  border-radius: 20px;
   font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
   background-color: #cc0000;
+  border-color: #cc0000;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
 }
 
+/* Updated Outline Button - More Professional Size */
 .btn-outline {
+  font-family: 'Montserrat', sans-serif;
   background-color: transparent;
   color: var(--dark-gray);
-  padding: 12px 30px;
+  padding: 10px 24px;
   border: 2px solid var(--dark-gray);
-  border-radius: 4px;
+  border-radius: 20px;
   font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-outline:hover {
   background-color: var(--dark-gray);
   color: white;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Updated White Outline Button - More Professional Size */
 .btn-outline-white {
+  font-family: 'Montserrat', sans-serif;
   background-color: transparent;
   color: white;
   padding: 10px 24px;
-  border: 1px solid #999;
-  border-radius: 4px;
+  border: 2px solid white;
+  border-radius: 20px;
   font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 .btn-outline-white:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: white;
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
 }
 
 /* Responsive grid utilities */

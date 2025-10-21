@@ -33,13 +33,22 @@ const newsData = [
   }
 ];
 
-const NewsEvents = () => {
+const NewsEvents = ({ onViewAll }) => {
+  // Handler for View All button
+  const handleViewAll = () => {
+    if (onViewAll) {
+      onViewAll();
+    }
+  };
+
   return (
     <section className={styles.newsEvents}>
       <div className="container">
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>NEWS AND EVENTS</h2>
-          <button className={styles.viewAllBtn}>View All</button>
+          <button className={styles.viewAllBtn} onClick={handleViewAll}>
+            View All
+          </button>
         </div>
         
         <p className={styles.sectionSubtitle}>

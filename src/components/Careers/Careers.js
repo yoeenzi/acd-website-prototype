@@ -204,22 +204,38 @@ const Careers = ({ onNavigateHome }) => {
           
           <div className={styles.benefitsGrid}>
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>💼</div>
+              <div className={styles.benefitIcon}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 7H16V5L14 3H10L8 5V7H4C2.9 7 2 7.9 2 9V14C2 14.75 2.4 15.38 3 15.73V19C3 20.11 3.89 21 5 21H19C20.11 21 21 20.11 21 19V15.72C21.59 15.37 22 14.73 22 14V9C22 7.9 21.1 7 20 7ZM10 5H14V7H10V5ZM4 9H20V14H15V11H9V14H4V9ZM13 15H11V13H13V15ZM19 19H5V16H9V17H15V16H19V19Z" fill="#FF0000"/>
+                </svg>
+              </div>
               <h3>Career Growth</h3>
               <p>Clear career paths and promotion opportunities across our franchise nationwide</p>
             </div>
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>📚</div>
+              <div className={styles.benefitIcon}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 5C19.89 4.65 18.67 4.5 17.5 4.5C15.55 4.5 13.45 4.9 12 6C10.55 4.9 8.45 4.5 6.5 4.5C4.55 4.5 2.45 4.9 1 6V20.65C1 20.9 1.25 21.15 1.5 21.15C1.6 21.15 1.65 21.1 1.75 21.1C3.1 20.45 5.05 20 6.5 20C8.45 20 10.55 20.4 12 21.5C13.35 20.65 15.8 20 17.5 20C19.15 20 20.85 20.3 22.25 21.05C22.35 21.1 22.4 21.1 22.5 21.1C22.75 21.1 23 20.85 23 20.6V6C22.4 5.55 21.75 5.25 21 5ZM21 18.5C19.9 18.15 18.7 18 17.5 18C15.8 18 13.35 18.65 12 19.5V8C13.35 7.15 15.8 6.5 17.5 6.5C18.7 6.5 19.9 6.65 21 7V18.5Z" fill="#FF0000"/>
+                </svg>
+              </div>
               <h3>Training & Development</h3>
               <p>Continuous learning with Hyundai certification programs and skills enhancement</p>
             </div>
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>❤️</div>
+              <div className={styles.benefitIcon}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="#FF0000"/>
+                </svg>
+              </div>
               <h3>Comprehensive Benefits</h3>
               <p>Health insurance, life insurance, and retirement benefits for you and your family</p>
             </div>
             <div className={styles.benefitCard}>
-              <div className={styles.benefitIcon}>⚖️</div>
+              <div className={styles.benefitIcon}>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="#FF0000"/>
+                </svg>
+              </div>
               <h3>Work-Life Balance</h3>
               <p>Flexible schedules and leave benefits to maintain a healthy work-life balance</p>
             </div>

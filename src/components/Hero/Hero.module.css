@@ -95,14 +95,17 @@
   text-align: left !important;
 }
 
-/* Button styles with Montserrat font and simple animations */
+/* Updated Button styles - More Professional */
 .heroButtons button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  border-radius: 25px; /* Rounded edges */
-  padding: 12px 30px;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 10px 24px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Simple hover effect for all buttons */

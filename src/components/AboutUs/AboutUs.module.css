@@ -14,6 +14,9 @@
   background-position: center;
   background-color: #f0f0f0;
   padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heroOverlay {
@@ -26,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  width: 100%;
 }
 
 .heroContent {
@@ -35,6 +38,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  padding: 0 20px;
 }
 
 .badge {
@@ -69,12 +73,13 @@
 .heroDescription {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #333;
-  max-width: 750px;
+  max-width: 850px;
   margin: 0 auto;
   font-weight: 500;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  text-align: center;
 }
 
 /* Our Story Section */
@@ -107,19 +112,21 @@
 .companyName {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 20px;
   color: #333;
   font-weight: 400;
+  text-align: justify;
 }
 
 .storyText {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 20px;
   color: #333;
   font-weight: 400;
+  text-align: justify;
 }
 
 .storyImage {
@@ -200,9 +207,10 @@
 .purposeText {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #666;
   font-weight: 400;
+  text-align: center;
 }
 
 /* Core Values Section */
@@ -363,6 +371,14 @@
   
   .storyContent {
     padding-right: 0;
+  }
+  
+  .companyName {
+    text-align: left;
+  }
+  
+  .storyText {
+    text-align: left;
   }
   
   .storyImage {

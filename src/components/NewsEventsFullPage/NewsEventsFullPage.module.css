@@ -5,84 +5,120 @@
   min-height: 100vh;
 }
 
-/* Hero Section */
+/* Hero Section - Matching Hero.js style */
 .hero {
   position: relative;
-  min-height: 350px;
-  background: linear-gradient(135deg, rgba(255, 0, 0, 0.9), rgba(139, 127, 20, 0.8));
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 450px;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-color: #888;
+  padding-bottom: 40px;
 }
 
 .heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.35);
+  padding-top: 50px;
   width: 100%;
-  padding: 60px 20px;
+}
+
+/* Custom container wrapper for hero to adjust left positioning */
+.heroContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Maintain consistent left padding on larger screens */
+@media (min-width: 1240px) {
+  .heroContainer {
+    padding: 0 20px;
+  }
 }
 
 .heroContent {
-  text-align: center;
-  color: white;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.badge {
-  background-color: #FBBF24;
-  color: #000;
-  padding: 8px 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: inline-block;
-  margin-bottom: 20px;
+  max-width: 650px;
+  text-align: left !important;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  margin-left: -5px;
 }
 
 .heroTitle {
   font-family: 'League Gothic', sans-serif;
-  font-size: clamp(36px, 5vw, 56px);
+  font-size: clamp(40px, 7vw, 65px);
   font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 20px 0;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: white;
+  line-height: 1.1;
+  margin: 0 0 15px 0;
+  padding: 0;
+  letter-spacing: 1px;
+  text-align: left !important;
+  text-transform: none;
+  display: block;
 }
 
-.textRed {
-  color: #FBBF24;
+.titleLine {
+  display: block;
+  color: #000000;
+  text-align: left !important;
+  text-transform: none;
+  margin-bottom: 8px;
+  padding: 0;
 }
 
-.heroDescription {
+.redText {
+  color: var(--primary-red, #FF0000);
+  display: inline;
+  text-transform: none;
+}
+
+.heroSubtitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  font-weight: 400;
-  line-height: 1.6;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.95);
+  color: #333333;
+  margin-bottom: 25px;
+  font-weight: 500;
+  text-align: left !important;
+  padding: 0;
+  margin-left: 0;
 }
 
-/* Mobile Responsive */
+/* Mobile Styles */
 @media (max-width: 768px) {
   .hero {
-    min-height: 300px;
+    min-height: 350px;
+    height: auto;
+  }
+  
+  .heroContent {
+    text-align: left !important;
+    max-width: 100%;
+    padding: 0;
   }
   
   .heroOverlay {
-    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.35);
+    padding-top: 25px;
   }
   
   .heroTitle {
-    font-size: clamp(32px, 7vw, 45px);
+    font-size: clamp(35px, 8vw, 50px);
+    text-align: left !important;
   }
   
-  .heroDescription {
+  .titleLine {
+    text-align: left !important;
+  }
+  
+  .heroSubtitle {
+    text-align: left !important;
     font-size: 16px;
-  }
-  
-  .heroDescription br {
-    display: none;
   }
 }

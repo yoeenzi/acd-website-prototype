@@ -15,7 +15,10 @@ const AllEquipmentHero = ({ onNavigateToTonly }) => {
     // Smooth scroll to equipment section
     const equipmentSection = document.getElementById('equipment-section');
     if (equipmentSection) {
-      equipmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Add a small delay to ensure the page is ready
+      setTimeout(() => {
+        equipmentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
     }
   };
 
