@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Footer from '../Footer/Footer';
 import ContactForm from '../ContactForm/ContactForm';
 import styles from './Careers.module.css';
 // Import hero background - will use construction-bg.png as default
@@ -368,8 +367,7 @@ const Careers = ({ onNavigateHome }) => {
         <ContactForm />
       </div>
       
-      {/* Footer */}
-      <Footer />
+      {/* Footer is now rendered in App.js, not here */}
     </div>
   );
 };

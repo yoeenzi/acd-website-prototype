@@ -207,7 +207,7 @@ function App() {
   return (
     <div className="App">
       <Header {...headerProps} />
-      <Hero />
+      <Hero onNavigateToHyundai={handleNavigateToHyundai} />
       <EquipmentShowcase onViewAll={() => {
         setCurrentPage('all-equipment');
         setScrollToHyundai(false); // Don't auto-scroll to equipment section

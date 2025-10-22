@@ -23,7 +23,7 @@
 .contentWrapper {
   display: flex;
   align-items: stretch;
-  height: 600px;
+  height: 700px;
   gap: 0;
   line-height: 0;
   font-size: 0;
@@ -56,14 +56,15 @@
 /* Right side - Contact Form */
 .formContainer {
   flex: 0 0 450px;
-  padding: 60px 50px;
+  padding: 50px 45px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: white;
   margin: 0;
   line-height: normal;
   font-size: 16px;
+  overflow-y: auto;
 }
 
 .badge {
@@ -80,7 +81,7 @@
   font-family: 'League Gothic', sans-serif;
   font-size: 42px;
   font-weight: 400;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   line-height: 1.1;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -89,7 +90,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .formInput,
@@ -97,7 +98,7 @@
   font-family: 'Montserrat', sans-serif;
   padding: 15px 20px;
   border: 1px solid #ddd;
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 20px;
   font-size: 16px;
   font-weight: 400;
   transition: all 0.3s ease;
@@ -112,7 +113,150 @@
 
 .formTextarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 100px;
+}
+
+/* File Attachment Section */
+.attachmentSection {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.attachmentLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: 2px dashed #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  background-color: #fafafa;
+}
+
+.attachmentLabel:hover {
+  border-color: #e31e24;
+  background-color: #fff5f5;
+  color: #e31e24;
+}
+
+.attachmentLabel svg {
+  flex-shrink: 0;
+}
+
+.fileInput {
+  display: none;
+}
+
+.attachmentHint {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: #999;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* File Error Message */
+.fileError {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #c00;
+  margin-top: -5px;
+}
+
+/* Attached Files List */
+.attachedFilesList {
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: -5px;
+}
+
+.attachedFilesTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.attachedFile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background-color: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.attachedFile:last-child {
+  margin-bottom: 0;
+}
+
+.attachedFile:hover {
+  border-color: #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+
+.fileInfo svg {
+  flex-shrink: 0;
+  color: #e31e24;
+}
+
+.fileName {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileSize {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  color: #999;
+  white-space: nowrap;
+}
+
+.removeFileBtn {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.removeFileBtn:hover {
+  background-color: #fee;
+  color: #e31e24;
 }
 
 .submitBtn {
@@ -120,7 +264,7 @@
   background-color: #e31e24;
   color: white;
   padding: 15px 40px;
-  border-radius: 30px; /* Fully rounded pill shape */
+  border-radius: 30px;
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
@@ -128,18 +272,20 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
+  margin-top: 5px;
 }
 
 .submitBtn:hover {
   background-color: #cc0000;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(227, 30, 36, 0.3);
 }
 
 /* Tablet styles */
 @media (max-width: 1024px) {
   .formContainer {
     flex: 0 0 400px;
-    padding: 50px 40px;
+    padding: 40px 35px;
   }
   
   .formTitle {
@@ -152,6 +298,7 @@
   .contentWrapper {
     flex-direction: column;
     min-height: auto;
+    height: auto;
   }
   
   .imageContainer {
@@ -162,11 +309,25 @@
   .formContainer {
     flex: 1;
     padding: 40px 30px;
+    max-height: none;
   }
   
   .formTitle {
     font-size: 36px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+  }
+  
+  .form {
+    gap: 16px;
+  }
+  
+  .attachmentLabel {
+    font-size: 13px;
+    padding: 12px 16px;
+  }
+  
+  .fileName {
+    font-size: 12px;
   }
 }
 
@@ -194,4 +355,33 @@
     padding: 14px 30px;
     font-size: 14px;
   }
+  
+  .attachmentLabel {
+    font-size: 12px;
+    padding: 10px 14px;
+    flex-wrap: wrap;
+  }
+  
+  .attachmentHint {
+    font-size: 10px;
+  }
+}
+
+/* Scrollbar styling for form container */
+.formContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.formContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.formContainer::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.formContainer::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }

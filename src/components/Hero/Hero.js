@@ -3,11 +3,17 @@ import styles from './Hero.module.css';
 // Import and use the background image
 import heroBackground from '../../assets/construction-bg.png';
 
-const Hero = () => {
+const Hero = ({ onNavigateToHyundai }) => {
   const handleGetQuote = () => {
     const contactSection = document.getElementById('contact-form-section');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handleExploreEquipment = () => {
+    if (onNavigateToHyundai) {
+      onNavigateToHyundai();
     }
   };
 
@@ -38,7 +44,7 @@ const Hero = () => {
               Heavy Equipment Solutions for Construction, Mining, and More.
             </p>
             <div className={styles.heroButtons}>
-              <button className="btn-primary">Explore Equipment</button>
+              <button className="btn-primary" onClick={handleExploreEquipment}>Explore Equipment</button>
               <button className="btn-outline" onClick={handleGetQuote}>Get Quote</button>
             </div>
           </div>
