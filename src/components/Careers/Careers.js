@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ContactForm from '../ContactForm/ContactForm';
+import ContactFormWithAttachment from '../ContactForm/ContactFormWithAttachment';
 import styles from './Careers.module.css';
 // Import hero background - will use construction-bg.png as default
 import heroBackground from '../../assets/careers.png';
@@ -362,9 +362,9 @@ const Careers = ({ onNavigateHome }) => {
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Contact Form with Attachment - UPDATED LINE */}
       <div id="contact-form-section">
-        <ContactForm />
+        <ContactFormWithAttachment />
       </div>
       
       {/* Footer is now rendered in App.js, not here */}
