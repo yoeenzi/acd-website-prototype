@@ -184,8 +184,17 @@ const Careers = ({ onNavigateHome }) => {
                 Be part of a dynamic team that's driving the heavy equipment industry forward. At ACD Corporation, we invest in our people, nurture talent, and create opportunities for growth and excellence.
               </p>
               <div className={styles.heroButtons}>
-                <button className={styles.btnPrimary}>View Open Positions</button>
-                <button className={styles.btnOutline}>Discover Our Culture</button>
+                <button 
+                  className={styles.btnPrimary}
+                  onClick={() => {
+                    const openPositionsSection = document.getElementById('open-positions-section');
+                    if (openPositionsSection) {
+                      openPositionsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                >
+                  View Open Positions
+                </button>
               </div>
             </div>
           </div>
@@ -244,7 +253,7 @@ const Careers = ({ onNavigateHome }) => {
       </section>
 
       {/* Open Positions Section */}
-      <section className={styles.openPositions}>
+      <section id="open-positions-section" className={styles.openPositions}>
         <div className="container">
           <h2 className={styles.sectionTitle}>
             Explore opportunities to grow your career with us
@@ -339,14 +348,25 @@ const Careers = ({ onNavigateHome }) => {
             Take the first step towards a rewarding career with ACD Corporation. Join us in building the future of the Philippines.
           </p>
           <div className={styles.ctaButtons}>
-            <button className={styles.btnDark}>Browse All Jobs</button>
-            <button className={styles.btnLight}>Send Your Resume</button>
+            <button 
+              className={styles.btnLight}
+              onClick={() => {
+                const contactFormSection = document.getElementById('contact-form-section');
+                if (contactFormSection) {
+                  contactFormSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+            >
+              Send Your Resume
+            </button>
           </div>
         </div>
       </section>
 
       {/* Contact Form */}
-      <ContactForm />
+      <div id="contact-form-section">
+        <ContactForm />
+      </div>
       
       {/* Footer */}
       <Footer />

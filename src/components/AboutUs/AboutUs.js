@@ -7,7 +7,12 @@ import styles from './AboutUs.module.css';
 import placeholderHero from '../../assets/aboutus-hero.png';
 import placeholderStory from '../../assets/excavator-working.png';
 
-const AboutUs = ({ onNavigateHome }) => {
+const AboutUs = ({ 
+  onNavigateHome,
+  onNavigateToServices,
+  onNavigateToAbout,
+  onNavigateToHyundai
+}) => {
   return (
     <div className={styles.aboutPage}>
       {/* About Hero Section */}
@@ -168,8 +173,13 @@ const AboutUs = ({ onNavigateHome }) => {
       {/* Contact Form Section - Reusing existing component */}
       <ContactForm />
 
-      {/* Footer - Reusing existing component */}
-      <Footer />
+      {/* Footer - Reusing existing component with navigation props */}
+      <Footer 
+        onNavigateHome={onNavigateHome}
+        onNavigateToServices={onNavigateToServices}
+        onNavigateToAbout={onNavigateToAbout}
+        onNavigateToHyundai={onNavigateToHyundai}
+      />
     </div>
   );
 };

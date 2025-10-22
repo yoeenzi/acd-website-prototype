@@ -26,7 +26,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className={styles.contactSection}>
+    <section className={styles.contactSection} id="contact-form-section">
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           {/* Left side - Team Image */}

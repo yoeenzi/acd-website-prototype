@@ -121,6 +121,14 @@ function App() {
     onNavigateToTonly: handleNavigateToTonly
   };
 
+  // Common footer props for all pages
+  const footerProps = {
+    onNavigateHome: handleNavigateHome,
+    onNavigateToServices: handleNavigateToServices,
+    onNavigateToAbout: handleNavigateToAbout,
+    onNavigateToHyundai: handleNavigateToHyundai
+  };
+
   // Show News & Events Full Page
   if (currentPage === 'news-events') {
     return (
@@ -143,6 +151,7 @@ function App() {
       <div className="App">
         <Header {...headerProps} />
         <Careers onNavigateHome={handleNavigateHome} />
+        <Footer {...footerProps} />
       </div>
     );
   }
@@ -163,6 +172,7 @@ function App() {
       <div className="App">
         <Header {...headerProps} />
         <Services />
+        <Footer {...footerProps} />
       </div>
     );
   }
@@ -175,6 +185,7 @@ function App() {
         <TonlyEquipment 
           onBackToAll={() => setCurrentPage('all-equipment')} 
         />
+        <Footer {...footerProps} />
       </div>
     );
   }
@@ -187,6 +198,7 @@ function App() {
         <AllEquipment 
           onNavigateToTonly={handleNavigateToTonly} 
         />
+        <Footer {...footerProps} />
       </div>
     );
   }
@@ -205,7 +217,7 @@ function App() {
       <CoreValues />
       <NewsEvents onViewAll={handleNavigateToNewsEvents} />
       <ContactForm />
-      <Footer />
+      <Footer {...footerProps} />
     </div>
   );
 }

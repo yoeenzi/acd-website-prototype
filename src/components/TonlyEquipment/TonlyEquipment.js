@@ -2,7 +2,6 @@ import React from 'react';
 import TonlyEquipmentHero from '../TonlyEquipmentHero/TonlyEquipmentHero';
 import TonlyEquipmentList from '../TonlyEquipmentList/TonlyEquipmentList';
 import ContactForm from '../ContactForm/ContactForm';
-import Footer from '../Footer/Footer';
 
 const TonlyEquipment = ({ onBackToAll }) => {
   return (
@@ -10,7 +9,6 @@ const TonlyEquipment = ({ onBackToAll }) => {
       <TonlyEquipmentHero onBackToAll={onBackToAll} />
       <TonlyEquipmentList />
       <ContactForm />
-      <Footer />
     </div>
   );
 };

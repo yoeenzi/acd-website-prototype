@@ -4,6 +4,13 @@ import styles from './Hero.module.css';
 import heroBackground from '../../assets/construction-bg.png';
 
 const Hero = () => {
+  const handleGetQuote = () => {
+    const contactSection = document.getElementById('contact-form-section');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section 
       className={styles.hero} 
@@ -32,7 +39,7 @@ const Hero = () => {
             </p>
             <div className={styles.heroButtons}>
               <button className="btn-primary">Explore Equipment</button>
-              <button className="btn-outline">Get Quote</button>
+              <button className="btn-outline" onClick={handleGetQuote}>Get Quote</button>
             </div>
           </div>
         </div>

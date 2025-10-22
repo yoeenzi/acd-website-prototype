@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../Footer/Footer';
 import ContactForm from '../ContactForm/ContactForm';
 import { Wrench, CheckCircle, Users } from 'lucide-react';
 import styles from './Services.module.css';
@@ -208,8 +207,6 @@ const Services = () => {
 
       {/* Contact Form Section */}
       <ContactForm />
-      
-      <Footer />
     </div>
   );
 };

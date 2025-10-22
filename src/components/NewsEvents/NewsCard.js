@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './NewsEvents.module.css';
 
-const NewsCard = ({ news }) => {
+const NewsCard = ({ news, onReadMore }) => {
   return (
     <div className={styles.newsCard}>
       <div className={styles.categoryBadge}>{news.category}</div>
@@ -16,7 +16,7 @@ const NewsCard = ({ news }) => {
         <p className={styles.newsDate}>{news.date}</p>
         <h3 className={styles.newsTitle}>{news.title}</h3>
         <p className={styles.newsDescription}>{news.description}</p>
-        <button className={styles.readMore} onClick={() => console.log('Read more clicked')}>
+        <button className={styles.readMore} onClick={() => onReadMore(news)}>
           Read More
         </button>
       </div>
