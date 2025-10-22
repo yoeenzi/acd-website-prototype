@@ -7,10 +7,24 @@ import styles from './NewsEventsFullPage.module.css';
 // Import hero background - same as Hero.js
 import heroBackground from '../../assets/construction-bg.png';
 
-const NewsEventsFullPage = ({ onNavigateHome }) => {
+const NewsEventsFullPage = ({ 
+  onNavigateHome,
+  onNavigateToServices,
+  onNavigateToAbout,
+  onNavigateToCareers,
+  onNavigateToHyundai,
+  onNavigateToTonly
+}) => {
   return (
     <div className={styles.newsEventsPage}>
-      <Header onNavigateHome={onNavigateHome} />
+      <Header 
+        onNavigateHome={onNavigateHome}
+        onNavigateToServices={onNavigateToServices}
+        onNavigateToAbout={onNavigateToAbout}
+        onNavigateToCareers={onNavigateToCareers}
+        onNavigateToHyundai={onNavigateToHyundai}
+        onNavigateToTonly={onNavigateToTonly}
+      />
       
       {/* Hero Section - EXACT COPY from Hero.js */}
       <section 

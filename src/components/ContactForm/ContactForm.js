@@ -27,13 +27,23 @@ const ContactForm = () => {
 
   return (
     <section className={styles.contactSection}>
-      <div className="container">
-        <div className={styles.formWrapper}>
+      <div className={styles.container}>
+        <div className={styles.contentWrapper}>
+          {/* Left side - Team Image */}
+          <div className={styles.imageContainer}>
+            <img 
+              src={teamBg} 
+              alt="ACE HD Team" 
+              className={styles.teamImage}
+            />
+          </div>
+          
+          {/* Right side - Contact Form */}
           <div className={styles.formContainer}>
             <p className={styles.badge}>CONTACT US!</p>
             <h3 className={styles.formTitle}>LET'S GET YOU MOVING!</h3>
             
-            <div className={styles.form}>
+            <form onSubmit={handleSubmit} className={styles.form}>
               <input
                 type="text"
                 name="name"
@@ -67,12 +77,12 @@ const ContactForm = () => {
                 className={styles.formTextarea}
               />
               <button
-                onClick={handleSubmit}
+                type="submit"
                 className={styles.submitBtn}
               >
                 Submit
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
