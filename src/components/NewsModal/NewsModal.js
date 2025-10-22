@@ -24,6 +24,20 @@ const NewsModal = ({ news, isOpen, onClose }) => {
     }
   };
 
+  // Handle Get in Touch button click
+  const handleGetInTouch = () => {
+    // Close the modal first
+    onClose();
+    
+    // Wait for modal to close, then scroll to contact form
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact-form-section');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 300);
+  };
+
   return (
     <div className={styles.modalOverlay} onClick={handleBackdropClick}>
       <div className={styles.modalContent}>
@@ -131,7 +145,9 @@ const NewsModal = ({ news, isOpen, onClose }) => {
                 <p className={styles.ctaText}>
                   Contact our team today to discover how ACD Corporation can support your next project.
                 </p>
-                <button className={styles.ctaButton}>Get in Touch</button>
+                <button className={styles.ctaButton} onClick={handleGetInTouch}>
+                  Get in Touch
+                </button>
               </div>
             </div>
           </div>
