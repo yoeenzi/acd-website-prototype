@@ -21,10 +21,13 @@ function App() {
 
   // Handle navigation to home
   const handleNavigateHome = () => {
-    setCurrentPage('home');
     setScrollToHyundai(false);
-    // Scroll to top when navigating home
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top instantly first
+    window.scrollTo({ top: 0 });
+    // Then change page after a brief moment
+    setTimeout(() => {
+      setCurrentPage('home');
+    }, 50);
   };
 
   // Handle navigation to Hyundai Equipment
@@ -39,57 +42,80 @@ function App() {
         }
       }, 100);
     } else {
-      // Navigate to page and set scroll flag
-      setCurrentPage('all-equipment');
+      // Scroll to top instantly first
+      window.scrollTo({ top: 0 });
       setScrollToHyundai(true);
+      // Then navigate to page
+      setTimeout(() => {
+        setCurrentPage('all-equipment');
+      }, 50);
     }
   };
 
   // Handle navigation to Tonly Trucks
   const handleNavigateToTonly = () => {
-    setCurrentPage('tonly-equipment');
     setScrollToHyundai(false);
-    // Scroll to top when navigating
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top instantly first
+    window.scrollTo({ top: 0 });
+    // Then change page after a brief moment
+    setTimeout(() => {
+      setCurrentPage('tonly-equipment');
+    }, 50);
   };
 
   // Handle navigation to Services
   const handleNavigateToServices = () => {
-    setCurrentPage('services');
     setScrollToHyundai(false);
-    // Scroll to top when navigating
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top instantly first
+    window.scrollTo({ top: 0 });
+    // Then change page after a brief moment
+    setTimeout(() => {
+      setCurrentPage('services');
+    }, 50);
   };
 
   // Handle navigation to About Us
   const handleNavigateToAbout = () => {
-    setCurrentPage('about-us');
     setScrollToHyundai(false);
-    // Scroll to top when navigating
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top instantly first
+    window.scrollTo({ top: 0 });
+    // Then change page after a brief moment
+    setTimeout(() => {
+      setCurrentPage('about-us');
+    }, 50);
   };
 
   // Handle navigation to Careers
   const handleNavigateToCareers = () => {
-    setCurrentPage('careers');
     setScrollToHyundai(false);
-    // Scroll to top when navigating
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top instantly first
+    window.scrollTo({ top: 0 });
+    // Then change page after a brief moment
+    setTimeout(() => {
+      setCurrentPage('careers');
+    }, 50);
   };
 
-  // Handle navigation to News & Events
+  // Handle navigation to News & Events - UPDATED
   const handleNavigateToNewsEvents = () => {
-    setCurrentPage('news-events');
     setScrollToHyundai(false);
-    // Scroll to top when navigating
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll to top instantly first
+    window.scrollTo({ top: 0 });
+    // Then change page after a brief moment
+    setTimeout(() => {
+      setCurrentPage('news-events');
+    }, 50);
   };
 
   // Handle "View All" from Equipment Showcase
   const handleViewAllEquipment = () => {
-    setCurrentPage('all-equipment');
     setScrollToHyundai(false); // Don't auto-scroll to equipment section
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Just go to top
+    // Scroll to top instantly first
+    window.scrollTo({ top: 0 });
+    // Then change page after a brief moment
+    setTimeout(() => {
+      setCurrentPage('all-equipment');
+    }, 50);
   };
 
   // Scroll to equipment section after page loads - ONLY for all-equipment page
@@ -209,9 +235,13 @@ function App() {
       <Header {...headerProps} />
       <Hero onNavigateToHyundai={handleNavigateToHyundai} />
       <EquipmentShowcase onViewAll={() => {
-        setCurrentPage('all-equipment');
         setScrollToHyundai(false); // Don't auto-scroll to equipment section
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Just go to top
+        // Scroll to top instantly first
+        window.scrollTo({ top: 0 });
+        // Then change page after a brief moment
+        setTimeout(() => {
+          setCurrentPage('all-equipment');
+        }, 50);
       }} />
       <AboutSection />
       <CoreValues />

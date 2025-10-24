@@ -63,8 +63,13 @@ const NewsEventsFullPage = ({
       {/* Contact Form Section */}
       <ContactForm />
       
-      {/* Footer */}
-      <Footer />
+      {/* Footer - with navigation props */}
+      <Footer 
+        onNavigateHome={onNavigateHome}
+        onNavigateToServices={onNavigateToServices}
+        onNavigateToAbout={onNavigateToAbout}
+        onNavigateToHyundai={onNavigateToHyundai}
+      />
     </div>
   );
 };
