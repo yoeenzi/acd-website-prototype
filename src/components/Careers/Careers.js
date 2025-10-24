@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ContactFormWithAttachment from '../ContactForm/ContactFormWithAttachment';
+import JobApplicationModal from '../JobApplicationModal/JobApplicationModal';
 import styles from './Careers.module.css';
 // Import hero background - will use construction-bg.png as default
 import heroBackground from '../../assets/careers.png';
@@ -12,6 +13,10 @@ const Careers = ({ onNavigateHome }) => {
     mobile: '',
     inquiry: ''
   });
+  
+  // State for job application modal
+  const [isApplicationModalOpen, setIsApplicationModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,6 +29,18 @@ const Careers = ({ onNavigateHome }) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     alert('Thank you for your inquiry! We will get back to you soon.');
+  };
+
+  // Handler for Apply Now button
+  const handleApplyNow = (job) => {
+    setSelectedJob(job);
+    setIsApplicationModalOpen(true);
+  };
+
+  // Handler for closing application modal
+  const handleCloseApplicationModal = () => {
+    setIsApplicationModalOpen(false);
+    setTimeout(() => setSelectedJob(null), 300);
   };
 
   const jobPositions = [
@@ -303,7 +320,12 @@ const Careers = ({ onNavigateHome }) => {
                     <li key={index}>✓ {req}</li>
                   ))}
                 </ul>
-                <button className={styles.applyBtn}>Apply Now</button>
+                <button 
+                  className={styles.applyBtn}
+                  onClick={() => handleApplyNow(job)}
+                >
+                  Apply Now
+                </button>
               </div>
             ))}
           </div>
@@ -366,6 +388,13 @@ const Careers = ({ onNavigateHome }) => {
       <div id="contact-form-section">
         <ContactFormWithAttachment />
       </div>
+      
+      {/* Job Application Modal */}
+      <JobApplicationModal
+        isOpen={isApplicationModalOpen}
+        onClose={handleCloseApplicationModal}
+        jobPosition={selectedJob}
+      />
       
       {/* Footer is now rendered in App.js, not here */}
     </div>
