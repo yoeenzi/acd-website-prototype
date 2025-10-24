@@ -468,3 +468,25 @@
     font-size: 13px;
   }
 }
+/* Tonly Blue Badge */
+.tonlyBadge {
+  background-color: #0066CC !important;
+}
+
+/* Tonly Blue Submit Button */
+.tonlySubmitBtn {
+  background-color: #0066CC !important;
+  border-color: #0066CC !important;
+}
+
+.tonlySubmitBtn:hover:not(:disabled) {
+  background-color: #0052A3 !important;
+  border-color: #0052A3 !important;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3) !important;
+}
+
+.tonlySubmitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}

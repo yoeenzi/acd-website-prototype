@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import EquipmentCard from './EquipmentCard';
 import EquipmentModal from '../EquipmentModal/EquipmentModal';
+import EquipmentContactModal from '../EquipmentContactModal/EquipmentContactModal'; // ADD THIS LINE
 import styles from './EquipmentShowcase.module.css';
 // Import equipment images
 import loaderImg from '../../assets/loader.png';
@@ -79,6 +80,9 @@ const equipmentData = [
 const EquipmentShowcase = ({ onViewAll }) => {
   const [selectedEquipment, setSelectedEquipment] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // ADD THESE TWO LINES:
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [contactEquipment, setContactEquipment] = useState(null);
 
   const handleCheckProduct = (equipment) => {
     setSelectedEquipment(equipment);
@@ -88,6 +92,17 @@ const EquipmentShowcase = ({ onViewAll }) => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setTimeout(() => setSelectedEquipment(null), 300);
+  };
+
+  // ADD THESE TWO FUNCTIONS:
+  const handleContactUs = (equipment) => {
+    setContactEquipment(equipment);
+    setIsContactModalOpen(true);
+  };
+
+  const handleCloseContactModal = () => {
+    setIsContactModalOpen(false);
+    setTimeout(() => setContactEquipment(null), 300);
   };
 
   return (
@@ -106,6 +121,7 @@ const EquipmentShowcase = ({ onViewAll }) => {
               key={equipment.id} 
               equipment={equipment}
               onCheckProduct={handleCheckProduct}
+              onContactUs={handleContactUs} // ADD THIS LINE
             />
           ))}
         </div>
@@ -125,6 +141,14 @@ const EquipmentShowcase = ({ onViewAll }) => {
         equipment={selectedEquipment}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+      />
+
+      {/* ADD THIS SECTION: */}
+      {/* Equipment Contact Modal */}
+      <EquipmentContactModal 
+        equipment={contactEquipment}
+        isOpen={isContactModalOpen}
+        onClose={handleCloseContactModal}
       />
     </section>
   );

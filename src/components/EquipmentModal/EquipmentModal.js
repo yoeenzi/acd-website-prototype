@@ -122,11 +122,12 @@ const EquipmentModal = ({ equipment, isOpen, onClose, isTonly = false }) => {
         </div>
       </div>
 
-      {/* Equipment Contact Modal */}
+      {/* Equipment Contact Modal - PASS isTonly prop here */}
       <EquipmentContactModal
         isOpen={isContactModalOpen}
         onClose={handleContactModalClose}
         equipment={equipment}
+        isTonly={isTonly}
       />
     </>
   );

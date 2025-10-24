@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import EquipmentModal from '../EquipmentModal/EquipmentModal';
+import EquipmentContactModal from '../EquipmentContactModal/EquipmentContactModal';
 import styles from './TonlyEquipmentList.module.css';
 // Import same equipment images as Hyundai equipment list
 import loaderImg from '../../assets/loader.png';
@@ -155,6 +156,7 @@ const TonlyEquipmentList = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL TRUCKS');
   const [selectedEquipment, setSelectedEquipment] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   const filteredEquipment = selectedCategory === 'ALL TRUCKS' 
     ? tonlyEquipmentData 
@@ -167,6 +169,18 @@ const TonlyEquipmentList = () => {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+    setTimeout(() => setSelectedEquipment(null), 300);
+  };
+
+  // Handler for Contact Us button
+  const handleContactUs = (equipment) => {
+    setSelectedEquipment(equipment);
+    setIsContactModalOpen(true);
+  };
+
+  // Handler for closing contact modal
+  const handleCloseContactModal = () => {
+    setIsContactModalOpen(false);
     setTimeout(() => setSelectedEquipment(null), 300);
   };
 
@@ -207,7 +221,12 @@ const TonlyEquipmentList = () => {
                     <p className={styles.cardType}>{equipment.type}</p>
                     <p className={styles.cardDescription}>{equipment.description}</p>
                     <div className={styles.cardButtons}>
-                      <button className={styles.contactBtn}>Contact Us</button>
+                      <button 
+                        className={styles.contactBtn}
+                        onClick={() => handleContactUs(equipment)}
+                      >
+                        Contact Us
+                      </button>
                       <button 
                         className={styles.checkBtn}
                         onClick={() => handleCheckProduct(equipment)}
@@ -228,6 +247,14 @@ const TonlyEquipmentList = () => {
         equipment={selectedEquipment}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+        isTonly={true}
+      />
+
+      {/* Equipment Contact Modal */}
+      <EquipmentContactModal
+        equipment={selectedEquipment}
+        isOpen={isContactModalOpen}
+        onClose={handleCloseContactModal}
         isTonly={true}
       />
     </section>

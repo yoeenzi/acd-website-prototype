@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import EquipmentModal from '../EquipmentModal/EquipmentModal';
+import EquipmentContactModal from '../EquipmentContactModal/EquipmentContactModal'; // ADD THIS LINE
 import styles from './AllEquipmentList.module.css';
 // Import equipment images
 import loaderImg from '../../assets/loader.png';
@@ -143,6 +144,9 @@ const AllEquipmentList = () => {
   const [selectedCategory, setSelectedCategory] = useState('ALL EQUIPMENT');
   const [selectedEquipment, setSelectedEquipment] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // ADD THESE TWO LINES:
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [contactEquipment, setContactEquipment] = useState(null);
 
   const filteredEquipment = selectedCategory === 'ALL EQUIPMENT' 
     ? allEquipmentData 
@@ -156,6 +160,17 @@ const AllEquipmentList = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setTimeout(() => setSelectedEquipment(null), 300);
+  };
+
+  // ADD THESE TWO FUNCTIONS:
+  const handleContactUs = (equipment) => {
+    setContactEquipment(equipment);
+    setIsContactModalOpen(true);
+  };
+
+  const handleCloseContactModal = () => {
+    setIsContactModalOpen(false);
+    setTimeout(() => setContactEquipment(null), 300);
   };
 
   return (
@@ -195,7 +210,13 @@ const AllEquipmentList = () => {
                     <p className={styles.cardType}>{equipment.type}</p>
                     <p className={styles.cardDescription}>{equipment.description}</p>
                     <div className={styles.cardButtons}>
-                      <button className={styles.contactBtn}>Contact Us</button>
+                      {/* MODIFY THIS BUTTON - ADD onClick: */}
+                      <button 
+                        className={styles.contactBtn}
+                        onClick={() => handleContactUs(equipment)}
+                      >
+                        Contact Us
+                      </button>
                       <button 
                         className={styles.checkBtn}
                         onClick={() => handleCheckProduct(equipment)}
@@ -216,6 +237,14 @@ const AllEquipmentList = () => {
         equipment={selectedEquipment}
         isOpen={isModalOpen}
         onClose={handleCloseModal}
+      />
+
+      {/* ADD THIS SECTION: */}
+      {/* Equipment Contact Modal */}
+      <EquipmentContactModal 
+        equipment={contactEquipment}
+        isOpen={isContactModalOpen}
+        onClose={handleCloseContactModal}
       />
     </section>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './EquipmentShowcase.module.css';
 
-const EquipmentCard = ({ equipment, onCheckProduct }) => {
+const EquipmentCard = ({ equipment, onCheckProduct, onContactUs }) => { // ADD onContactUs to props
   return (
     <div className={styles.card}>
       <div className={styles.cardImageContainer}>
@@ -19,7 +19,13 @@ const EquipmentCard = ({ equipment, onCheckProduct }) => {
         <p className={styles.cardType}>{equipment.type}</p>
         <p className={styles.cardDescription}>{equipment.description}</p>
         <div className={styles.cardButtons}>
-          <button className={styles.contactBtn}>Contact Us</button>
+          {/* MODIFY THIS BUTTON - ADD onClick: */}
+          <button 
+            className={styles.contactBtn}
+            onClick={() => onContactUs(equipment)}
+          >
+            Contact Us
+          </button>
           <button 
             className={styles.checkBtn}
             onClick={() => onCheckProduct(equipment)}

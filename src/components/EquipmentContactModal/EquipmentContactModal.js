@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, Paperclip } from 'lucide-react';
 import styles from './EquipmentContactModal.module.css';
 
-const EquipmentContactModal = ({ isOpen, onClose, equipment }) => {
+const EquipmentContactModal = ({ isOpen, onClose, equipment, isTonly = false }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -170,7 +170,9 @@ const EquipmentContactModal = ({ isOpen, onClose, equipment }) => {
 
         {/* Modal Header */}
         <div className={styles.modalHeader}>
-          <div className={styles.equipmentBadge}>{equipment.category}</div>
+          <div className={`${styles.equipmentBadge} ${isTonly ? styles.tonlyBadge : ''}`}>
+            {equipment.category}
+          </div>
           <h2 className={styles.modalTitle}>Request a Quote</h2>
           <p className={styles.equipmentInfo}>
             <strong>{equipment.model}</strong> - {equipment.type}
@@ -322,7 +324,7 @@ const EquipmentContactModal = ({ isOpen, onClose, equipment }) => {
             {/* Submit Button */}
             <button
               type="submit"
-              className={styles.submitBtn}
+              className={`${styles.submitBtn} ${isTonly ? styles.tonlySubmitBtn : ''}`}
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Submitting...' : 'Submit Inquiry'}
