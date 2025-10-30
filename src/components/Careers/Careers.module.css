@@ -580,76 +580,270 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
+/* Tablet Responsive Design */
 @media (max-width: 1024px) {
   .benefitsGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 20px;
   }
   
   .valuesGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 20px;
+  }
+  
+  .jobsGrid {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+  
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
   }
 }
 
-/* Mobile Styles */
+/* Mobile Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    min-height: 350px;
+    min-height: 380px;
     height: auto;
+    background: #F0000D;
+  }
+  
+  .heroOverlay {
+    background: rgba(240, 0, 13, 0.51);
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .heroContainer {
+    padding: 0 20px;
   }
   
   .heroContent {
     text-align: left !important;
     max-width: 100%;
     padding: 0;
+    margin-left: 0;
   }
   
-  .heroButtons {
-    justify-content: flex-start !important;
-  }
-  
-  .heroOverlay {
-    background: rgba(240, 0, 13, 0.51);
-    padding-top: 25px;
+  .badge {
+    font-size: 10px;
+    padding: 6px 16px;
+    margin-bottom: 15px;
   }
   
   .heroTitle {
-    font-size: clamp(35px, 8vw, 50px);
+    font-size: clamp(32px, 8vw, 45px);
     text-align: left !important;
+    margin-bottom: 18px;
   }
   
   .heroSubtitle {
     text-align: left !important;
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
   }
   
   .heroButtons {
+    justify-content: flex-start !important;
     flex-direction: column;
     align-items: stretch;
+    gap: 12px;
   }
   
-  .benefitsGrid,
-  .jobsGrid,
-  .valuesGrid,
-  .testimonialsGrid {
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
+    max-width: 300px;
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+  
+  .whyChoose {
+    padding: 60px 0;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(28px, 7vw, 38px);
+    padding: 0 20px;
+  }
+  
+  .sectionSubtitle {
+    font-size: 15px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+  
+  .benefitsGrid {
     grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .benefitCard {
+    padding: 30px 20px;
+  }
+  
+  .openPositions {
+    padding: 60px 0;
   }
   
   .tabContainer {
     justify-content: flex-start;
     overflow-x: auto;
-    padding-bottom: 10px;
+    padding: 0 20px 15px;
+    -webkit-overflow-scrolling: touch;
   }
   
-  .sectionTitle {
-    font-size: clamp(32px, 7vw, 42px);
+  .tab {
+    padding: 10px 20px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  
+  .jobsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .jobCard {
+    padding: 25px 20px;
+  }
+  
+  .jobTitle {
+    font-size: 24px;
+  }
+  
+  .coreValues {
+    padding: 60px 0;
   }
   
   .coreValuesTitle {
-    font-size: clamp(32px, 7vw, 45px);
+    font-size: clamp(28px, 7vw, 40px);
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .coreValuesTitle br {
+    display: none;
+  }
+  
+  .valuesGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .valueCard {
+    padding: 30px 20px;
+  }
+  
+  .valueTitle {
+    min-height: auto;
+    font-size: 22px;
+  }
+  
+  .testimonials {
+    padding: 60px 0;
+  }
+  
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .testimonialCard {
+    padding: 25px 20px;
+  }
+  
+  .quote {
+    font-size: 60px;
+  }
+  
+  .readyToStart {
+    padding: 60px 0;
   }
   
   .ctaTitle {
-    font-size: clamp(36px, 8vw, 48px);
+    font-size: clamp(32px, 8vw, 44px);
+    padding: 0 20px;
+  }
+  
+  .ctaSubtitle {
+    font-size: 15px;
+    padding: 0 20px;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .btnDark,
+  .btnLight {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Small Mobile Responsive Design */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 350px;
+  }
+  
+  .heroTitle {
+    font-size: clamp(28px, 9vw, 38px);
+  }
+  
+  .heroSubtitle {
+    font-size: 14px;
+  }
+  
+  .badge {
+    font-size: 9px;
+    padding: 5px 14px;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(24px, 8vw, 32px);
+  }
+  
+  .benefitCard h3 {
+    font-size: 20px;
+  }
+  
+  .benefitCard p {
+    font-size: 13px;
+  }
+  
+  .jobTitle {
+    font-size: 22px;
+  }
+  
+  .valueCircle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .valueLetter {
+    font-size: 36px;
+  }
+  
+  .valueTitle {
+    font-size: 20px;
+  }
+  
+  .ctaTitle {
+    font-size: clamp(28px, 9vw, 38px);
   }
 }

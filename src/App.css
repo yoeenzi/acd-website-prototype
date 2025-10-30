@@ -1,6 +1,7 @@
 .App {
   min-height: 100vh;
   overflow-x: hidden;
+  padding-top: 80px; /* Added for fixed header */
 }
 
 /* Global utility classes */

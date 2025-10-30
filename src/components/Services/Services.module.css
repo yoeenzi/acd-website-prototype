@@ -75,6 +75,7 @@
   display: flex;
   gap: 40px;
   margin-top: 50px;
+  flex-wrap: wrap;
 }
 
 .stat {
@@ -298,34 +299,139 @@
   line-height: 1.5;
 }
 
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 0 20px;
+  }
+  
+  .serviceDescription {
+    min-height: auto;
+  }
+  
+  .statsRow {
+    gap: 30px;
+  }
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+  }
+  
+  .heroOverlay {
+    padding: 40px 0;
+  }
+  
+  .heroContainer {
+    padding: 0 20px;
+  }
+  
+  .heroContent {
+    max-width: 100%;
+  }
+  
+  .badge {
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+  
   .heroTitle {
-    font-size: 36px;
+    font-size: clamp(32px, 8vw, 42px);
+    margin-bottom: 15px;
+  }
+  
+  .heroTitle br {
+    display: none;
   }
   
   .heroSubtitle {
     font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  .heroSubtitle br {
+    display: none;
   }
   
   .statsRow {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 25px;
+    margin-top: 30px;
   }
   
   .statNumber {
-    font-size: 32px;
+    font-size: 36px;
+  }
+  
+  .statLabel {
+    font-size: 11px;
+  }
+  
+  .coreServices {
+    padding: 60px 0;
+  }
+  
+  .sectionHeader {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(32px, 7vw, 40px);
+  }
+  
+  .sectionSubtitle {
+    font-size: 14px;
+    padding: 0 10px;
   }
   
   .servicesGrid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .serviceCard {
+    padding: 0;
+  }
+  
+  .serviceIcon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .serviceIcon svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .serviceTitle {
+    font-size: 20px;
+  }
+  
+  .serviceDescription {
+    font-size: 13px;
+    min-height: auto;
+  }
+  
+  .serviceList {
+    font-size: 12px;
+  }
+  
+  .serviceProcess {
+    padding: 60px 0;
   }
   
   .processSteps {
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+    padding: 0 20px;
   }
   
   .processSteps::before {
@@ -336,7 +442,88 @@
     display: none;
   }
   
-  .sectionTitle {
+  .stepNumber {
+    width: 70px;
+    height: 70px;
     font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .stepContent {
+    max-width: 100%;
+  }
+  
+  .stepTitle {
+    font-size: 20px;
+  }
+  
+  .stepDescription {
+    font-size: 14px;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 350px;
+  }
+  
+  .heroTitle {
+    font-size: clamp(28px, 9vw, 36px);
+  }
+  
+  .heroSubtitle {
+    font-size: 13px;
+  }
+  
+  .badge {
+    font-size: 9px;
+    padding: 4px 10px;
+  }
+  
+  .statsRow {
+    gap: 20px;
+  }
+  
+  .statNumber {
+    font-size: 32px;
+  }
+  
+  .statLabel {
+    font-size: 10px;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+  
+  .sectionSubtitle {
+    font-size: 13px;
+  }
+  
+  .serviceTitle {
+    font-size: 18px;
+  }
+  
+  .serviceDescription {
+    font-size: 12px;
+  }
+  
+  .serviceList {
+    font-size: 11px;
+  }
+  
+  .stepNumber {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+  }
+  
+  .stepTitle {
+    font-size: 18px;
+  }
+  
+  .stepDescription {
+    font-size: 13px;
   }
 }

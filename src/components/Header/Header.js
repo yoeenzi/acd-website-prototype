@@ -38,10 +38,27 @@ const Header = ({
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [showSearchResults, setShowSearchResults] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   
   const companyDropdownRef = useRef(null);
   const productsDropdownRef = useRef(null);
   const searchRef = useRef(null);
+
+  // Handle scroll to add shadow effect
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -153,7 +170,7 @@ const Header = ({
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.headerContent}>
         {/* Logo with image */}
         <div className={styles.logo}>

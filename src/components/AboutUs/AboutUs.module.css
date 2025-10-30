@@ -295,6 +295,7 @@
 .partnerContent {
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .partnerTitle {
@@ -337,71 +338,134 @@
   transform: translateY(-2px);
 }
 
-/* Mobile Responsive Styles */
+/* Tablet Responsive Styles */
 @media (max-width: 1024px) {
   .coreValuesGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     padding: 0 20px;
   }
-}
-
-@media (max-width: 768px) {
-  .aboutHero {
-    padding: 60px 0;
-    min-height: 350px;
-  }
   
-  .heroOverlay {
-    padding: 60px 20px;
-  }
-  
-  .heroTitle {
-    font-size: clamp(35px, 8vw, 50px);
-  }
-  
-  .heroDescription {
-    font-size: 14px;
+  .purposeGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0 20px;
   }
   
   .storyGrid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
-  
-  .storyContent {
-    padding-right: 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .aboutHero {
+    padding: 40px 0;
+    min-height: 300px;
   }
   
-  .companyName {
-    text-align: left;
+  .heroOverlay {
+    padding: 40px 0;
   }
   
-  .storyText {
-    text-align: left;
+  .heroContent {
+    padding: 0 20px;
   }
   
-  .storyImage {
-    height: 300px;
+  .badge {
+    font-size: 10px;
+    padding: 6px 18px;
+    margin-bottom: 15px;
   }
   
-  .purposeGrid {
+  .heroTitle {
+    font-size: clamp(32px, 8vw, 45px);
+    margin-bottom: 20px;
+  }
+  
+  .heroDescription {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .heroDescription br {
+    display: none;
+  }
+  
+  .ourStory {
+    padding: 60px 0;
+  }
+  
+  .storyGrid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
   
+  .storyContent {
+    padding: 0 20px;
+  }
+  
+  .storyTitle {
+    font-size: clamp(36px, 7vw, 48px);
+    margin-bottom: 25px;
+  }
+  
+  .companyName {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .storyText {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .storyImage {
+    height: 250px;
+    margin: 0 20px;
+  }
+  
+  .purposeSection {
+    padding: 60px 0;
+  }
+  
+  .purposeGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+  
+  .purposeCard {
+    padding: 30px 25px;
+  }
+  
   .sectionTitle {
-    font-size: clamp(32px, 7vw, 45px);
+    font-size: clamp(28px, 7vw, 40px);
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .sectionTitle br {
+    display: none;
+  }
+  
+  .coreValuesSection {
+    padding: 60px 0;
   }
   
   .coreValuesGrid {
     grid-template-columns: 1fr;
     gap: 20px;
+    padding: 0 20px;
   }
   
   .coreValuesTagline {
     font-size: clamp(24px, 6vw, 32px);
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding: 0 20px;
   }
   
   .coreValueCard {
@@ -409,15 +473,87 @@
   }
   
   .coreValueTitle {
-    font-size: 22px;
+    font-size: 20px;
     min-height: auto;
   }
   
+  .coreValueText {
+    font-size: 13px;
+  }
+  
+  .partnerSection {
+    padding: 60px 0;
+  }
+  
+  .partnerContent {
+    padding: 0 20px;
+  }
+  
   .partnerTitle {
-    font-size: clamp(32px, 7vw, 45px);
+    font-size: clamp(28px, 7vw, 40px);
   }
   
   .partnerText {
-    font-size: 16px;
+    font-size: 15px;
+  }
+  
+  .partnerText br {
+    display: none;
+  }
+  
+  .downloadBtn {
+    font-size: 13px;
+    padding: 12px 30px;
+  }
+}
+
+/* Small Mobile Responsive Styles */
+@media (max-width: 480px) {
+  .aboutHero {
+    padding: 30px 0;
+    min-height: 280px;
+  }
+  
+  .heroTitle {
+    font-size: clamp(28px, 10vw, 38px);
+  }
+  
+  .heroDescription {
+    font-size: 13px;
+  }
+  
+  .badge {
+    font-size: 9px;
+    padding: 5px 15px;
+  }
+  
+  .iconCircle {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .iconCircle svg {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .storyImage {
+    height: 220px;
+    margin: 0 15px;
+  }
+  
+  .purposeCard,
+  .coreValueCard {
+    padding: 25px 20px;
+  }
+  
+  .purposeTitle,
+  .coreValueTitle {
+    font-size: 22px;
+  }
+  
+  .sectionTitle {
+    font-size: clamp(24px, 8vw, 36px);
+    line-height: 1.3;
   }
 }
